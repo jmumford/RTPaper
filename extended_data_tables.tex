@@ -1,0 +1,89 @@
+\documentclass[sn-mathphys,Numbered, super]{sn-jnl}
+%\documentclass[sn-nature,Numbered, super]{sn-jnl}
+
+%\usepackage[figuresonly]{endfloat}
+\usepackage{color}
+\usepackage{array}
+\usepackage{natbib}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{epsfig}
+\usepackage[title]{appendix}
+\usepackage{alltt}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}
+\usepackage{chngcntr}
+\usepackage{titlesec}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\newcommand{\tcr}{\textcolor{red}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+     
+\begin{document}
+
+
+\section{Contrast interpretation}
+
+Contrast interpretation only refers to trials with a specific RT value for condition versus baseline comparisons (or condition comparisons where only some conditions involve RTs).  Examples are shown in Table \ref{tab:contrast-descriptions}.
+
+
+\begin{table}[ht!]
+\caption{Contrast interpretation examples using the Stroop task.}\label{tab:contrast-descriptions}
+  \begin{tabular}{p{1.2in}p{1.4in}p{2in}}
+  \toprule
+     \textbf{Contrast type} & \textbf{Example}    & \textbf{Interpretation in} \\ 
+        & \textbf{Stroop task)} & \textbf{ConsDurRTDur/ConsDurRTMod} \\
+   \toprule
+     Condition (RTs) vs. \newline baseline & Incongruent  vs. baseline & Incongruent activation when RT is 0 \\ 
+     Condition (RTs) vs. \newline Condition (RTs) & Incongruent vs. Congruent & Condition difference \newline (same for all RTs) \\ 
+     \bottomrule
+   \end{tabular}
+\end{table}
+
+
+\newpage
+\section{Impact of orthogonalization on contrast interpretation}
+
+Orthogonalization of the RT-based regressor can impact the interpretation of some condition contrasts.  In some cases orthogonalization can introduce a between-subject RT effect, which is not acceptable.  Details of what the orthogonalization looks like and when the result is not acceptable are given in Table \ref{tab:orthog}.
+
+\begin{table}[ht!]
+\caption{Orthogonalization examples that describe how orthogonalization may be carried out and the implication on the interpretation of the original model's contrast estimates (Table 1).  Note that ``cond1'' and ``cond2'' are constant duration regressors for each condition and ``all\_trials'' is a constant duration regressor including all trials with RTs.}\label{tab:orthog}
+  \begin{tabular}{p{.75in}p{1.5in}p{2in}p{.55in}}
+  \toprule
+     \textbf{Model} & \textbf{Orthogonalization} \newline \textbf{procedure}    & \textbf{Implication of orthogonalization for contrasts in Extended Data Table 1} & \textbf{Acceptable?} \\ 
+   \toprule
+     ConsDurRTDur & Replace RTDur with residual from: \newline RTDur $\sim$ Cond1 + Cond2  & RT adjustment has been neutralized, rendering the contrast estimates to be equivalent to  ConsDurNoRT. & No \\      
+     ConsDurRTDur & Replace RTDur with residual from: \newline RTDur $\sim$ all\_trials  & Contrasts that correspond to RT of 0 now correspond to the mean RT of the run. Between-subject RT confound has been introduced. & No \\ 
+     ConsDurRTMod (all RTs$<$2s) & Center RTs by mean(RT), across run & Contrasts that previously corresponded to an RT of 0 now correspond to the mean RT of the run. Between-subject RT confound has been introduced. & No\\ 
+     ConsDurRTMod (all RTs$<$2s) & Center RTs by the same constant, $C$, in all runs (any $C$ within range of RTs is fine) & Contrasts that previously corresponded to an RT of 0 now correspond to an RT of $C$ & Maybe \\
+     \bottomrule
+   \end{tabular}
+\end{table}
+
+\newpage
+
+\end{document}

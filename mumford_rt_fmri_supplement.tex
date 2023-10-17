@@ -1,0 +1,326 @@
+\documentclass[sn-mathphys,Numbered, super]{sn-jnl}
+%\documentclass[sn-nature,Numbered, super]{sn-jnl}
+
+%\usepackage[figuresonly]{endfloat}
+\usepackage{color}
+\usepackage{array}
+\usepackage{natbib}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{epsfig}
+\usepackage[title]{appendix}
+\usepackage{alltt}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}
+\usepackage{chngcntr}
+\usepackage{titlesec}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\newcommand{\tcr}{\textcolor{red}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+     
+\begin{document}
+
+%\title[Article Title]{Supplementary material for: The response time paradox in functional magnetic resonance imaging analyses}
+
+%\author*[1]{\fnm{Jeanette A.}  %\sur{Mumford}}\email{jeanette.mumford@gmail.com}
+
+%\author[1]{\fnm{Patrick G.} \sur{Bissett}}
+%\author[2]{\fnm{Henry M.} \sur{Jones}}
+%\author[1]{\fnm{Sunjae} \sur{Shim}}
+%\author[1]{\fnm{Jaime Ali H.} \sur{Rios}}
+%\author[1]{\fnm{Russell A.} \sur{Poldrack}}
+%\affil[1]{Department of Psychology, Stanford University}
+%\affil[2]{Department of Psychology, University of Chicago}
+
+%\maketitle
+%\newpage
+%\beginsupplement
+
+\tableofcontents
+\newpage 
+
+
+
+\section{Details about tasks involved in real data analysis}
+
+\begin{table}[h!bt]
+    \caption{fMRI task summaries}
+    \label{tab:task_summaries}
+    \begin{tabular}{L{4cm}L{5cm}L{1cm}L{1cm}L{1cm}}
+   \toprule
+   \textbf{Name} & \textbf{Description} & \textbf{N} & \textbf{Age mn(sd)} & \textbf{N Female} \\ 
+   \midrule
+   Attention Network Test (ANT) &  Tests three aspects of attention or  ``attentional networks": alerting, orienting, and executive control & 91 & 24(5) & 60\\ 
+    Delay-Discounting Task (DDT) & Measure of temporal discounting, the tendency for people to prefer immediate monetary rewards over delayed rewards & 86 & 24(6) & 57\\ 
+   Dot Pattern Expectancy (DPX) & Measure of individual differences in cognitive control including proactive and reactive control modes & 91 & 24(5) & 61\\ 
+   Motor Selective Stop Signal & Measures the ability to engage response inhibition selectively to specific responses & 91 & 24(5) & 63 \\ 
+   Stop-Signal Task & Measure of response inhibition & 91 & 24(5) & 60 \\ 
+   Stroop & Measure of cognitive control perhaps including resisting distraction or attentional filtering & 94 & 24(5) & 62 \\ 
+   Cued Task-Switching Task (CTS) & Indexes the processes involved in reconfiguring the cognitive system to support a new task & 94 & 24(5) & 61\\
+    \end{tabular}
+ \end{table}
+
+The Attention Network Test (ANT) is a task designed to test three attentional networks: (1) alerting, (2) orienting, and (3) executive control. The ANT combines attentional and spatial cues with a flanker task (a central imperative stimulus is flanked by distractors that can indicate the same or opposite response to the imperative stimulus). On each trial a spatial cue is presented, followed by an array of five arrows presented at either the top or the bottom of the computer screen. The subject must indicate the direction of the central arrow in the array of five. The cue that precedes the arrows can be non-existent, a center cue, a double cue (one presented at each of the two possible target locations), or a spatial cue that deterministically indicates the upcoming target location. Each network is assessed via reaction times (RTs). The alerting network contrasts performance with and without cues, the orienting network contrasts performance on the task with or without a reliable spatial cue, and executive control (conflict) is measured by assessing interference from flankers.
+
+The Dot Pattern Expectancy (DPX) task measures individual differences in cognitive control. Participants are presented with a cue made up of dots. This cue can be a valid cue – referred to as A (e.g., ":") – or an invalid cue – referred to as B (e.g., ".."). Next a probe is presented, also made up of a simple dot formation. This probe can be valid (X) or invalid (Y). Participants are instructed to respond to valid probe and cue combinations (targets – AX combinations) with a key press (e.g., “x”) and all others (non-targets) with a different key press (e.g., “m”).
+
+The Delay-Discounting Task (DDT) is a measure of temporal discounting, the tendency for people to prefer smaller, immediate monetary rewards over larger, delayed rewards. Participants complete a series of 27 questions that each require choosing between a smaller, immediate reward (e.g., \$25 today) versus a larger, later reward (e.g., \$35 in 25 days). The 27 items are divided into three groups according to the size of the larger amount (small, medium, or large). Modeling techniques are used to fit the function that relates time to discounting. The main dependent measure of interest is the steepness of the discounting curve such that a more steeply declining curve represents a tendency to devalue rewards as they become more temporally remote.
+
+The cued task-switching task indexes the control processes involved in reconfiguring the cognitive system to support a new stimulus-response mapping. In this task, subjects are presented with a task cue followed by a colored number (between 1-4 or 6-9). The cue indicates whether to respond based on parity (odd/even), magnitude (greater/less than 5), or color (orange/blue). Trials can present the same cue and task, or can switch the cue or the task. Responses are slower and less accurate when the cue or task differs across trials (i.e., a switch) compared to when the current cue or task remains the same (i.e., a repeat).
+
+The Stop-Signal Task is designed to measure motor response inhibition, one aspect of cognitive control. On each trial of this task participants are instructed to make a speeded response to an imperative ``go'' stimulus except on a subset of trials when an additional ``stop signal'' occurs, in which case participants are instructed that they should make no response. The Independent Race Model describes performance in the Stop-Signal Task as a race between a go process that begins when the go stimulus occurs and a stop process that begins when the stop signal occurs. According to this model, whichever independent process reaches completion first determines the resulting behavior; earlier completion of the go process results in an overt response (i.e., stop-failure), whereas earlier completion of the stop process results in successful inhibition. The main dependent measure, stop-signal reaction time (SSRT), can be computed such that lower SSRT indicates greater response inhibition. One variant of the task measures proactive slowing, the tendency for participants to respond more slowly in anticipation of a potential stopping signal. This variant often uses multiple probabilities of a stop signal (e.g., 20\% and 40\%) to manipulate participants’ expectancies about the likelihood of a stop signal occurring. The extent of slowing in the higher compared to the lower stop probability conditions is an index of proactive slowing/control.
+
+The motor selective stop-signal task measures the ability to engage response inhibition selectively to specific responses. In this task, cues are presented to elicit motor responses (e.g., right hand responses, left hand responses). A stop-signal is presented on some trials, and subjects must stop if certain responses are required on that trial (e.g., right hand responses) but not others (e.g., left hand responses) if a signal occurs. In contrast to a simple stop-signal task in which all actions are stopped when a stop-signal is presented, this task aims to be more like stopping in ``the real world'' in that certain motor actions must be stopped (e.g., stop pressing the accelerator at a red light) but others should proceed (e.g., steering the car and/or conversing with a passenger). Commonly, stop-signal reaction time (SSRT), the main dependent measure for response inhibition in stopping tasks, is prolonged in the motor selective stopping task when compared to the more canonical simple stopping task. This prolongation of SSRT is taken as evidence of the cost of engaging inhibition that is selective to specific effectors or responses.
+
+The Stroop task is a seminal measure of cognitive control. Successful performance of the task requires the ability to overcome automatic tendencies to respond in accordance with current goals. On each trial of the task, a color word (e.g., ``red'', ``blue'') is presented in one of multiple ink colors (e.g., blue, red). Participants are instructed to respond based upon the ink color of the word, not the identity of the word itself. When the color and the word are congruent (e.g., “red” in red ink), the natural tendency to read the word facilitates performance, resulting in fast and accurate responding. When the color and the word are incongruent (e.g., ``red'' in blue ink), the strong, natural tendency to read must be overcome to respond to the ink color. The main dependent measure in the Stroop task is the ``Stroop Effect'', which is the degree of slowing and the reduction in accuracy for incongruent relative to congruent trials.
+
+
+\newpage
+\section{Exclusion information by task for real data analysis}
+
+
+\begin{table}[ht!]
+\caption{Exclusion information for Attention Network task.}
+\small
+\begin{tabular}
+{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)} \\ \hline 
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+\begin{table}[ht!]
+\caption{Exclusion information for Delay-Discount task.}
+\small 
+\begin{tabular} 
+{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)}& \textbf{Made same choice on all trials} \\ 
+\midrule
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+\begin{table}[ht!]
+\caption{Exclusion information for Dot Pattern Expectancy task.}
+\small
+\begin{tabular}{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)} \\ 
+\midrule
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[ht!]
+\caption{Exclusion information for Motor Selective Stop Signal task.}
+\small
+\begin{tabular}{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)} & \textbf{\textgreater{}75\% stop success rate} & \textbf{\textless{}25\% stop success rate}\\ 
+\midrule
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+\begin{table}[ht!]
+\caption{Exclusion information for Stop Signal task.}
+\small
+\begin{tabular}{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)} & \textbf{\textgreater{}75\% stop success rate} & \textbf{\textless{}25\% stop success rate}\\ 
+\midrule
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\newpage
+\begin{table}[ht!]
+\caption{Exclusion information for Stroop task.}
+\small
+\begin{tabular}{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)} \\ 
+\midrule
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 1 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+\begin{table}[ht!]
+\caption{Exclusion information for Cued Task Switching task.}
+\small
+\begin{tabular}{p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{Incomplete data} & \textbf{Subject omitted (issues with behav. \textgreater{} 50\% of tasks)} & \textbf{High motion \textgreater{}20\% total volumes} & \textbf{No response on \textgreater{}45\% of trials} & \textbf{Stopped performing task at end of scan} & \textbf{Poor performance (subjective)} \\ 
+\midrule
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+\end{document}
